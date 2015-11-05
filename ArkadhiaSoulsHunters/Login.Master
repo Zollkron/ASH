@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.Master.cs" Inherits="ArkadhiaSoulsHunters.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Arkadhia Souls Hunters</title>
+    <link href="~/Css/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <asp:SiteMapPath ID="SiteMapPath1" Runat="server">
+        </asp:SiteMapPath>
+        
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" Runat="server" />
+
+        <asp:Menu ID="Menu1" Runat="server" DataSourceID="SiteMapDataSource1"
+            Orientation="Horizontal" 
+            StaticDisplayLevels="2"
+            CssClass="Menu">
+            <StaticMenuStyle CssClass="StaticMenuStyle" />
+            <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+            <DynamicMenuItemStyle CssClass="StaticMenuItemStyle" />
+        </asp:Menu>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
