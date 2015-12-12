@@ -10,7 +10,7 @@
 namespace ArkadhiaSoulsHunters {
     
     
-    public partial class Site {
+    public partial class Login {
         
         /// <summary>
         /// Control head.

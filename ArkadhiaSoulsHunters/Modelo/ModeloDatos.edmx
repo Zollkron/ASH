@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="arkadhiashdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Arma">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="ataque" Type="float" Nullable="false" />
+          <Property Name="defensa" Type="float" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brazales">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="defensa" Type="float" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Casco">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="defensa" Type="float" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cazador">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nivel" Type="int" Nullable="false" />
+          <Property Name="almas" Type="int" Nullable="false" />
+          <Property Name="salud" Type="int" Nullable="false" />
+          <Property Name="estamina" Type="int" Nullable="false" />
+          <Property Name="supervivencia" Type="int" Nullable="false" />
+          <Property Name="fuerza" Type="int" Nullable="false" />
+          <Property Name="detreza" Type="int" Nullable="false" />
+          <Property Name="poder" Type="int" Nullable="false" />
+          <Property Name="resistenciaFisica" Type="int" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="equipoActivo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cinto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="defensa" Type="float" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Criatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="ataqueFisico" Type="float" Nullable="false" />
+          <Property Name="ataqueTierra" Type="int" Nullable="false" />
+          <Property Name="ataqueAgua" Type="int" Nullable="false" />
+          <Property Name="ataqueHielo" Type="int" Nullable="false" />
+          <Property Name="ataqueAire" Type="int" Nullable="false" />
+          <Property Name="ataqueFuego" Type="int" Nullable="false" />
+          <Property Name="ataqueOscuridad" Type="int" Nullable="false" />
+          <Property Name="ataqueLuz" Type="int" Nullable="false" />
+          <Property Name="poder" Type="int" Nullable="false" />
+          <Property Name="resistenciaFisica" Type="int" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="tipoCriatura" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Equipacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="casco" Type="int" Nullable="false" />
+          <Property Name="peto" Type="int" Nullable="false" />
+          <Property Name="brazales" Type="int" Nullable="false" />
+          <Property Name="cinto" Type="int" Nullable="false" />
+          <Property Name="grebas" Type="int" Nullable="false" />
+          <Property Name="arma" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grebas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="defensa" Type="float" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lugar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Objeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="tipoObjeto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Peto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="defesa" Type="float" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="int" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="int" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="int" Nullable="false" />
+          <Property Name="resistenciaAire" Type="int" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="int" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="int" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="int" Nullable="false" />
+          <Property Name="durabilidad" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoCriatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoObjeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nick" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="cazador" Type="int" />
+        </EntityType>
+        <Association Name="ASH_CRIATURAS_ibfk_1">
+          <End Role="TipoCriatura" Type="Self.TipoCriatura" Multiplicity="1" />
+          <End Role="Criatura" Type="Self.Criatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCriatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Criatura">
+              <PropertyRef Name="tipoCriatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_1">
+          <End Role="Casco" Type="Self.Casco" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Casco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="casco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_2">
+          <End Role="Peto" Type="Self.Peto" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Peto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="peto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_3">
+          <End Role="Brazales" Type="Self.Brazales" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brazales">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="brazales" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_4">
+          <End Role="Cinto" Type="Self.Cinto" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="cinto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_5">
+          <End Role="Grebas" Type="Self.Grebas" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grebas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="grebas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_6">
+          <End Role="Arma" Type="Self.Arma" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Arma">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="arma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_OBJETOS_ibfk_1">
+          <End Role="TipoObjeto" Type="Self.TipoObjeto" Multiplicity="1" />
+          <End Role="Objeto" Type="Self.Objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoObjeto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Objeto">
+              <PropertyRef Name="tipoObjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CazadorFK1">
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="1" />
+          <End Role="Cazador" Type="Self.Cazador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cazador">
+              <PropertyRef Name="equipoActivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAZADOR">
+          <End Role="Cazador" Type="Self.Cazador" Multiplicity="0..1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cazador">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="cazador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="arkadhiashdbModelStoreContainer">
+          <EntitySet Name="Arma" EntityType="Self.Arma" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Brazales" EntityType="Self.Brazales" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Casco" EntityType="Self.Casco" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Cazador" EntityType="Self.Cazador" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Cinto" EntityType="Self.Cinto" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Criatura" EntityType="Self.Criatura" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Equipacion" EntityType="Self.Equipacion" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Grebas" EntityType="Self.Grebas" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Lugar" EntityType="Self.Lugar" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Objeto" EntityType="Self.Objeto" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Peto" EntityType="Self.Peto" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="TipoCriatura" EntityType="Self.TipoCriatura" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="TipoObjeto" EntityType="Self.TipoObjeto" Schema="arkadhiashdb" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="arkadhiashdb" store:Type="Tables" />
+          <AssociationSet Name="ASH_CRIATURAS_ibfk_1" Association="Self.ASH_CRIATURAS_ibfk_1">
+            <End Role="TipoCriatura" EntitySet="TipoCriatura" />
+            <End Role="Criatura" EntitySet="Criatura" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_1" Association="Self.ASH_EQUIPACIONES_ibfk_1">
+            <End Role="Casco" EntitySet="Casco" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_2" Association="Self.ASH_EQUIPACIONES_ibfk_2">
+            <End Role="Peto" EntitySet="Peto" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_3" Association="Self.ASH_EQUIPACIONES_ibfk_3">
+            <End Role="Brazales" EntitySet="Brazales" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_4" Association="Self.ASH_EQUIPACIONES_ibfk_4">
+            <End Role="Cinto" EntitySet="Cinto" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_5" Association="Self.ASH_EQUIPACIONES_ibfk_5">
+            <End Role="Grebas" EntitySet="Grebas" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_6" Association="Self.ASH_EQUIPACIONES_ibfk_6">
+            <End Role="Arma" EntitySet="Arma" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_OBJETOS_ibfk_1" Association="Self.ASH_OBJETOS_ibfk_1">
+            <End Role="TipoObjeto" EntitySet="TipoObjeto" />
+            <End Role="Objeto" EntitySet="Objeto" />
+          </AssociationSet>
+          <AssociationSet Name="CazadorFK1" Association="Self.CazadorFK1">
+            <End Role="Equipacion" EntitySet="Equipacion" />
+            <End Role="Cazador" EntitySet="Cazador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAZADOR" Association="Self.FK_CAZADOR">
+            <End Role="Cazador" EntitySet="Cazador" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="arkadhiashdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Arma">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ataque" Type="Single" Nullable="false" />
+          <Property Name="defensa" Type="Single" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_6" FromRole="Arma" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="Brazales">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="defensa" Type="Single" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_3" FromRole="Brazales" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="Casco">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="defensa" Type="Single" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_1" FromRole="Casco" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="Cazador">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nivel" Type="Int32" Nullable="false" />
+          <Property Name="almas" Type="Int32" Nullable="false" />
+          <Property Name="salud" Type="Int32" Nullable="false" />
+          <Property Name="estamina" Type="Int32" Nullable="false" />
+          <Property Name="supervivencia" Type="Int32" Nullable="false" />
+          <Property Name="fuerza" Type="Int32" Nullable="false" />
+          <Property Name="detreza" Type="Int32" Nullable="false" />
+          <Property Name="poder" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFisica" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="equipoActivo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.CazadorFK1" FromRole="Cazador" ToRole="Equipacion" />
+          <NavigationProperty Name="Usuario" Relationship="arkadhiashdbModel.FK_CAZADOR" FromRole="Cazador" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Cinto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="defensa" Type="Single" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_4" FromRole="Cinto" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="Criatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ataqueFisico" Type="Single" Nullable="false" />
+          <Property Name="ataqueTierra" Type="Int32" Nullable="false" />
+          <Property Name="ataqueAgua" Type="Int32" Nullable="false" />
+          <Property Name="ataqueHielo" Type="Int32" Nullable="false" />
+          <Property Name="ataqueAire" Type="Int32" Nullable="false" />
+          <Property Name="ataqueFuego" Type="Int32" Nullable="false" />
+          <Property Name="ataqueOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="ataqueLuz" Type="Int32" Nullable="false" />
+          <Property Name="poder" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFisica" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="tipoCriatura" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoCriatura1" Relationship="Self.ASH_CRIATURAS_ibfk_1" FromRole="Criatura" ToRole="TipoCriatura" />
+        </EntityType>
+        <EntityType Name="Equipacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="casco" Type="Int32" Nullable="false" />
+          <Property Name="peto" Type="Int32" Nullable="false" />
+          <Property Name="brazales" Type="Int32" Nullable="false" />
+          <Property Name="cinto" Type="Int32" Nullable="false" />
+          <Property Name="grebas" Type="Int32" Nullable="false" />
+          <Property Name="arma" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Arma1" Relationship="Self.ASH_EQUIPACIONES_ibfk_6" FromRole="Equipacion" ToRole="Arma" />
+          <NavigationProperty Name="Brazales1" Relationship="Self.ASH_EQUIPACIONES_ibfk_3" FromRole="Equipacion" ToRole="Brazales" />
+          <NavigationProperty Name="Casco1" Relationship="Self.ASH_EQUIPACIONES_ibfk_1" FromRole="Equipacion" ToRole="Casco" />
+          <NavigationProperty Name="Cazador" Relationship="Self.CazadorFK1" FromRole="Equipacion" ToRole="Cazador" />
+          <NavigationProperty Name="Cinto1" Relationship="Self.ASH_EQUIPACIONES_ibfk_4" FromRole="Equipacion" ToRole="Cinto" />
+          <NavigationProperty Name="Peto1" Relationship="Self.ASH_EQUIPACIONES_ibfk_2" FromRole="Equipacion" ToRole="Peto" />
+          <NavigationProperty Name="Grebas1" Relationship="Self.ASH_EQUIPACIONES_ibfk_5" FromRole="Equipacion" ToRole="Grebas" />
+        </EntityType>
+        <EntityType Name="Grebas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="defensa" Type="Single" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_5" FromRole="Grebas" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="Lugar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Objeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipoObjeto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoObjeto1" Relationship="Self.ASH_OBJETOS_ibfk_1" FromRole="Objeto" ToRole="TipoObjeto" />
+        </EntityType>
+        <EntityType Name="Peto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="defesa" Type="Single" Nullable="false" />
+          <Property Name="resistenciaTierra" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAgua" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaHielo" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaAire" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaFuego" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaOscuridad" Type="Int32" Nullable="false" />
+          <Property Name="resistenciaLuz" Type="Int32" Nullable="false" />
+          <Property Name="durabilidad" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Equipacion" Relationship="Self.ASH_EQUIPACIONES_ibfk_2" FromRole="Peto" ToRole="Equipacion" />
+        </EntityType>
+        <EntityType Name="TipoCriatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Criatura" Relationship="Self.ASH_CRIATURAS_ibfk_1" FromRole="TipoCriatura" ToRole="Criatura" />
+        </EntityType>
+        <EntityType Name="TipoObjeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Objeto" Relationship="Self.ASH_OBJETOS_ibfk_1" FromRole="TipoObjeto" ToRole="Objeto" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nick" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cazador" Type="Int32" />
+          <NavigationProperty Name="Cazador1" Relationship="Self.FK_CAZADOR" FromRole="Usuario" ToRole="Cazador" />
+        </EntityType>
+        <Association Name="ASH_EQUIPACIONES_ibfk_6">
+          <End Role="Arma" Type="Self.Arma" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Arma">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="arma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_3">
+          <End Role="Brazales" Type="Self.Brazales" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brazales">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="brazales" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_1">
+          <End Role="Casco" Type="Self.Casco" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Casco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="casco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CazadorFK1">
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="1" />
+          <End Role="Cazador" Type="Self.Cazador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cazador">
+              <PropertyRef Name="equipoActivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAZADOR">
+          <End Role="Cazador" Type="Self.Cazador" Multiplicity="0..1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cazador">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="cazador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_4">
+          <End Role="Cinto" Type="Self.Cinto" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="cinto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_CRIATURAS_ibfk_1">
+          <End Role="TipoCriatura" Type="Self.TipoCriatura" Multiplicity="1" />
+          <End Role="Criatura" Type="Self.Criatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCriatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Criatura">
+              <PropertyRef Name="tipoCriatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_2">
+          <End Role="Peto" Type="Self.Peto" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Peto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="peto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_EQUIPACIONES_ibfk_5">
+          <End Role="Grebas" Type="Self.Grebas" Multiplicity="1" />
+          <End Role="Equipacion" Type="Self.Equipacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grebas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Equipacion">
+              <PropertyRef Name="grebas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ASH_OBJETOS_ibfk_1">
+          <End Role="TipoObjeto" Type="Self.TipoObjeto" Multiplicity="1" />
+          <End Role="Objeto" Type="Self.Objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoObjeto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Objeto">
+              <PropertyRef Name="tipoObjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="arkadhiashdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Arma" EntityType="Self.Arma" />
+          <EntitySet Name="Brazales" EntityType="Self.Brazales" />
+          <EntitySet Name="Casco" EntityType="Self.Casco" />
+          <EntitySet Name="Cazador" EntityType="Self.Cazador" />
+          <EntitySet Name="Cinto" EntityType="Self.Cinto" />
+          <EntitySet Name="Criatura" EntityType="Self.Criatura" />
+          <EntitySet Name="Equipacion" EntityType="Self.Equipacion" />
+          <EntitySet Name="Grebas" EntityType="Self.Grebas" />
+          <EntitySet Name="Lugar" EntityType="Self.Lugar" />
+          <EntitySet Name="Objeto" EntityType="Self.Objeto" />
+          <EntitySet Name="Peto" EntityType="Self.Peto" />
+          <EntitySet Name="TipoCriatura" EntityType="Self.TipoCriatura" />
+          <EntitySet Name="TipoObjeto" EntityType="Self.TipoObjeto" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_6" Association="Self.ASH_EQUIPACIONES_ibfk_6">
+            <End Role="Arma" EntitySet="Arma" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_3" Association="Self.ASH_EQUIPACIONES_ibfk_3">
+            <End Role="Brazales" EntitySet="Brazales" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_1" Association="Self.ASH_EQUIPACIONES_ibfk_1">
+            <End Role="Casco" EntitySet="Casco" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="CazadorFK1" Association="Self.CazadorFK1">
+            <End Role="Equipacion" EntitySet="Equipacion" />
+            <End Role="Cazador" EntitySet="Cazador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAZADOR" Association="Self.FK_CAZADOR">
+            <End Role="Cazador" EntitySet="Cazador" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_4" Association="Self.ASH_EQUIPACIONES_ibfk_4">
+            <End Role="Cinto" EntitySet="Cinto" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_CRIATURAS_ibfk_1" Association="Self.ASH_CRIATURAS_ibfk_1">
+            <End Role="TipoCriatura" EntitySet="TipoCriatura" />
+            <End Role="Criatura" EntitySet="Criatura" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_2" Association="Self.ASH_EQUIPACIONES_ibfk_2">
+            <End Role="Peto" EntitySet="Peto" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_EQUIPACIONES_ibfk_5" Association="Self.ASH_EQUIPACIONES_ibfk_5">
+            <End Role="Grebas" EntitySet="Grebas" />
+            <End Role="Equipacion" EntitySet="Equipacion" />
+          </AssociationSet>
+          <AssociationSet Name="ASH_OBJETOS_ibfk_1" Association="Self.ASH_OBJETOS_ibfk_1">
+            <End Role="TipoObjeto" EntitySet="TipoObjeto" />
+            <End Role="Objeto" EntitySet="Objeto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="arkadhiashdbModelStoreContainer" CdmEntityContainer="arkadhiashdbEntities">
+          <EntitySetMapping Name="Arma">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Arma">
+              <MappingFragment StoreEntitySet="Arma">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="ataque" ColumnName="ataque" />
+                <ScalarProperty Name="defensa" ColumnName="defensa" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brazales">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Brazales">
+              <MappingFragment StoreEntitySet="Brazales">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="defensa" ColumnName="defensa" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Casco">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Casco">
+              <MappingFragment StoreEntitySet="Casco">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="defensa" ColumnName="defensa" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cazador">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Cazador">
+              <MappingFragment StoreEntitySet="Cazador">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+                <ScalarProperty Name="almas" ColumnName="almas" />
+                <ScalarProperty Name="salud" ColumnName="salud" />
+                <ScalarProperty Name="estamina" ColumnName="estamina" />
+                <ScalarProperty Name="supervivencia" ColumnName="supervivencia" />
+                <ScalarProperty Name="fuerza" ColumnName="fuerza" />
+                <ScalarProperty Name="detreza" ColumnName="detreza" />
+                <ScalarProperty Name="poder" ColumnName="poder" />
+                <ScalarProperty Name="resistenciaFisica" ColumnName="resistenciaFisica" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="equipoActivo" ColumnName="equipoActivo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cinto">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Cinto">
+              <MappingFragment StoreEntitySet="Cinto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="defensa" ColumnName="defensa" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Criatura">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Criatura">
+              <MappingFragment StoreEntitySet="Criatura">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="ataqueFisico" ColumnName="ataqueFisico" />
+                <ScalarProperty Name="ataqueTierra" ColumnName="ataqueTierra" />
+                <ScalarProperty Name="ataqueAgua" ColumnName="ataqueAgua" />
+                <ScalarProperty Name="ataqueHielo" ColumnName="ataqueHielo" />
+                <ScalarProperty Name="ataqueAire" ColumnName="ataqueAire" />
+                <ScalarProperty Name="ataqueFuego" ColumnName="ataqueFuego" />
+                <ScalarProperty Name="ataqueOscuridad" ColumnName="ataqueOscuridad" />
+                <ScalarProperty Name="ataqueLuz" ColumnName="ataqueLuz" />
+                <ScalarProperty Name="poder" ColumnName="poder" />
+                <ScalarProperty Name="resistenciaFisica" ColumnName="resistenciaFisica" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="tipoCriatura" ColumnName="tipoCriatura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipacion">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Equipacion">
+              <MappingFragment StoreEntitySet="Equipacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="casco" ColumnName="casco" />
+                <ScalarProperty Name="peto" ColumnName="peto" />
+                <ScalarProperty Name="brazales" ColumnName="brazales" />
+                <ScalarProperty Name="cinto" ColumnName="cinto" />
+                <ScalarProperty Name="grebas" ColumnName="grebas" />
+                <ScalarProperty Name="arma" ColumnName="arma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grebas">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Grebas">
+              <MappingFragment StoreEntitySet="Grebas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="defensa" ColumnName="defensa" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lugar">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Lugar">
+              <MappingFragment StoreEntitySet="Lugar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Objeto">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Objeto">
+              <MappingFragment StoreEntitySet="Objeto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="tipoObjeto" ColumnName="tipoObjeto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Peto">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Peto">
+              <MappingFragment StoreEntitySet="Peto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="defesa" ColumnName="defesa" />
+                <ScalarProperty Name="resistenciaTierra" ColumnName="resistenciaTierra" />
+                <ScalarProperty Name="resistenciaAgua" ColumnName="resistenciaAgua" />
+                <ScalarProperty Name="resistenciaHielo" ColumnName="resistenciaHielo" />
+                <ScalarProperty Name="resistenciaAire" ColumnName="resistenciaAire" />
+                <ScalarProperty Name="resistenciaFuego" ColumnName="resistenciaFuego" />
+                <ScalarProperty Name="resistenciaOscuridad" ColumnName="resistenciaOscuridad" />
+                <ScalarProperty Name="resistenciaLuz" ColumnName="resistenciaLuz" />
+                <ScalarProperty Name="durabilidad" ColumnName="durabilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCriatura">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.TipoCriatura">
+              <MappingFragment StoreEntitySet="TipoCriatura">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoObjeto">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.TipoObjeto">
+              <MappingFragment StoreEntitySet="TipoObjeto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="arkadhiashdbModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nick" ColumnName="nick" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cazador" ColumnName="cazador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

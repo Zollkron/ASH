@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="619f838afa354843a298675453cf9530" Name="Diagram1">
+        <EntityTypeShape EntityType="arkadhiashdbModel.Arma" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Brazales" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Casco" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Cazador" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Cinto" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Criatura" Width="1.5" PointX="10" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Equipacion" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Grebas" Width="1.5" PointX="0.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Lugar" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Objeto" Width="1.5" PointX="5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Peto" Width="1.5" PointX="0.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.TipoCriatura" Width="1.5" PointX="7.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.TipoObjeto" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="arkadhiashdbModel.Usuario" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_6" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.CazadorFK1" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.FK_CAZADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_CRIATURAS_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_EQUIPACIONES_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="arkadhiashdbModel.ASH_OBJETOS_ibfk_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
