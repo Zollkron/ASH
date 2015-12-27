@@ -4,15 +4,14 @@
 
     private DaoFactoria() { }
 
-    //public DaoUsuario getDaoUsuario()
-    //{
-    //    return new DaoUsuario();
-    //}
-
-    public DaoFactoria getUnicaInstancia()
+    public static DaoFactoria GetUnicaInstancia()
     {
         if (unicaInstancia == null) unicaInstancia = new DaoFactoria();
         return unicaInstancia;
     }
 
+    public DaoUsuario GetDaoUsuario()
+    {
+        return new DaoUsuario();
+    }
 }

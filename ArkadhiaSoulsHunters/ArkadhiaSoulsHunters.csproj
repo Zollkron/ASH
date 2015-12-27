@@ -78,7 +78,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\Controlador.cs" />
+    <Compile Include="Dao\1.Interfaces\IDaoUsuario.cs" />
     <Compile Include="Dao\1.Interfaces\IDaoFactoria.cs" />
+    <Compile Include="Dao\2.Implementaciones\DaoUsuario.cs" />
     <Compile Include="Dao\2.Implementaciones\DaoFactoria.cs" />
     <Content Include="Modelo\ModeloDatos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -204,9 +207,7 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controlador\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
