@@ -37,6 +37,17 @@
     margin-right:3%;
 }
 
+.label_error{
+    color:#F44;
+    float:left;
+    font-size:16px;
+    font-weight:bold;
+    padding-top:0em;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:0%;
+}
+
 .panel_error{
     width:100%;
     height:25px;

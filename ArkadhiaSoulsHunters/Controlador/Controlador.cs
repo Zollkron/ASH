@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArkadhiaSoulsHunters.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,6 +23,12 @@ namespace ArkadhiaSoulsHunters.ControladorPrincipal
         {
             DaoUsuario usuarioDao = factoria.GetDaoUsuario();
             return usuarioDao.CheckLogin(nick, clave);
+        }
+
+        public Usuario GetUsuarioByNick(string nick)
+        {
+            DaoUsuario usuarioDao = factoria.GetDaoUsuario();
+            return usuarioDao.FindByNick(nick);
         }
 
     }

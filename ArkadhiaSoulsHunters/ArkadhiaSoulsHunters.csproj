@@ -94,6 +94,7 @@
       <LastGenOutput>ModeloDatos.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="Presentacion\Principal.aspx" />
     <Content Include="Presentacion\Login.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Login.Master" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="Modelo\Usuario.cs">
       <DependentUpon>ModeloDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -22,7 +22,13 @@ namespace ArkadhiaSoulsHunters.Presentacion
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             //nick.Text = "He pulsado el botón";
-            nick.Text = controlador.Login(nick.Text, clave.Text).ToString();
+            //nick.Text = controlador.Login(nick.Text, clave.Text).ToString();
+            if (controlador.Login(nick.Text, clave.Text))
+            {
+                Session["Usuario"] = controlador.GetUsuarioByNick(nick.Text);
+                Response.Redirect("~/Presentacion/Principal.aspx");
+            }
+            else mensaje.Text = "El nick o el password no son correctos.";
         }
     }
 }
